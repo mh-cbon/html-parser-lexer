@@ -1,0 +1,4 @@
+package: github.com/mh-cbon/html-parser-lexer
+import:
+- package: github.com/mh-cbon/state-lexer
+  version: ^0.0.1
