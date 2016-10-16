@@ -1,10 +1,8 @@
 # html-parser-lexer
 
-Parse html content.
+Parse html content with [state-lexer](https://github.com/mh-cbon/state-lexer).
 
 ## Usage
-
-Finally invoke a new instance of `Lexer.L` and call for `Scan()` method.
 
 ```go
 package main
