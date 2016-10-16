@@ -242,7 +242,7 @@ func Example_lexer() {
 	l.Scan(func(tok lexer.Token) {
 		fmt.Fprintf(w, "%v\t %v\t %q\n", TokenName(tok), tok.Type, tok.Value)
 	})
-  
+
 	w.Flush()
 	//Output:
 	// name               | type | value
