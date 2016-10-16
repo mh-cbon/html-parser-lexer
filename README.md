@@ -23,12 +23,12 @@ func main() {
 	l := htmlparserlexer.NewHtmlParserLexer(b)
 
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
+  
 	fmt.Fprintf(w, "%v\t %v\t %v\n", "name", "type", "value")
-	var tokens []lexer.Token
 	l.Scan(func(tok lexer.Token) {
-		tokens = append(tokens, tok)
 		fmt.Fprintf(w, "%v\t %v\t %q\n", htmlparserlexer.TokenName(tok), tok.Type, tok.Value)
 	})
+
 	w.Flush()
 	//Output:
 	// name               | type | value
