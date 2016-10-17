@@ -1,5 +1,27 @@
 # Changelog - html-parser-lexer
 
+### 0.0.2
+
+__Changes__
+
+- removed TagOpenStartToken and TagCloseStartToken tokens
+  to improve usability of the parsing result.
+  For a tag such "<html>" is parsed it now returns 2 tokens :
+  TagOpenToken    "<html"
+  TagOpenEndToken ">"
+  For a tag such "</html>" is parsed it now returns 2 tokens :
+  TagCloseToken     "</html"
+  TagCloseEndToken  ">"
+- fix test for removal of TagOpenStartToken and TagCloseStartToken
+
+__Contributors__
+
+- mh-cbon
+
+Released by mh-cbon, Mon 17 Oct 2016 -
+[see the diff](https://github.com/mh-cbon/html-parser-lexer/compare/0.0.1...0.0.2#diff)
+______________
+
 ### 0.0.1
 
 __Changes__
