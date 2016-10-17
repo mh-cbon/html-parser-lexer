@@ -31,7 +31,7 @@ func main() {
 
 	w.Flush()
 	//Output:
-  // name             | type | value
+	// name             | type | value
 	// TagOpenToken     | 0    | "<html"
 	// TagOpenEndToken  | 3    | ">"
 	// TextToken        | 11   | "c o n t e n t"
