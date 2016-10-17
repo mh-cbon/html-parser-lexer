@@ -11,9 +11,9 @@ const (
 	TagOpenToken  lexer.TokenType = iota // 0
 	TagCloseToken                        // 1
 
-	TagOpenStartToken  // 2
+  yyy // 4
 	TagOpenEndToken    // 3
-	TagCloseStartToken // 4
+	xxx // 4
 	TagCloseEndToken   // 5
 
 	TagAttrNameToken  // 6
@@ -239,7 +239,6 @@ func TagStartState(l *lexer.L) lexer.StateFunc {
 	if r != '<' {
 		panic("ohoh not a tag start")
 	}
-	l.Emit(TagOpenStartToken)
 
 	// // eat in between ws
 	if r := eatSomeWs(l); r == lexer.EOFRune {
@@ -290,7 +289,6 @@ func TagCloseState(l *lexer.L) lexer.StateFunc {
 	if r != '/' {
 		panic("ohoh not a tag close")
 	}
-	l.Emit(TagCloseStartToken)
 
 	// // eat in between ws
 	if r := eatSomeWs(l); r == lexer.EOFRune {
@@ -410,12 +408,8 @@ func TokenName(tok lexer.Token) string {
 		return "TagOpenToken"
 	case TagCloseToken:
 		return "TagCloseToken"
-	case TagOpenStartToken:
-		return "TagOpenStartToken"
 	case TagOpenEndToken:
 		return "TagOpenEndToken"
-	case TagCloseStartToken:
-		return "TagCloseStartToken"
 	case TagCloseEndToken:
 		return "TagCloseEndToken"
 	case TagAttrNameToken:
