@@ -23,7 +23,7 @@ func main() {
 	l := htmlparserlexer.NewHtmlParserLexer(b)
 
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 1, ' ', tabwriter.Debug)
-  
+
 	fmt.Fprintf(w, "%v\t %v\t %v\n", "name", "type", "value")
 	l.Scan(func(tok lexer.Token) {
 		fmt.Fprintf(w, "%v\t %v\t %q\n", htmlparserlexer.TokenName(tok), tok.Type, tok.Value)
@@ -31,13 +31,11 @@ func main() {
 
 	w.Flush()
 	//Output:
-	// name               | type | value
-	// TagOpenStartToken  | 2    | "<"
-	// TagOpenToken       | 0    | "html"
-	// TagOpenEndToken    | 3    | ">"
-	// TextToken          | 11   | "c o n t e n t"
-	// TagCloseStartToken | 4    | "</"
-	// TagCloseToken      | 1    | "html"
-	// TagCloseEndToken   | 5    | ">"
+  // name             | type | value
+	// TagOpenToken     | 0    | "<html"
+	// TagOpenEndToken  | 3    | ">"
+	// TextToken        | 11   | "c o n t e n t"
+	// TagCloseToken    | 1    | "</html"
+	// TagCloseEndToken | 5    | ">"
 }
 ```
