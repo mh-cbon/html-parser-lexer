@@ -1,4 +1,22 @@
 
+UNRELEASED
+
+  * removed TagOpenStartToken and TagCloseStartToken tokens
+    to improve usability of the parsing result.
+    For a tag such "<html>" is parsed it now returns 2 tokens :
+      TagOpenToken    "<html"
+      TagOpenEndToken ">"
+    For a tag such "</html>" is parsed it now returns 2 tokens :
+      TagCloseToken     "</html"
+      TagCloseEndToken  ">"
+  * fix test for removal of TagOpenStartToken and TagCloseStartToken
+
+  - mh-cbon <mh-cbon@users.noreply.github.com>
+
+-- mh-cbon <mh-cbon@users.noreply.github.com>; Mon, 17 Oct 2016 15:57:06 +0200
+
+
+
 0.0.1
 
   * init
@@ -6,5 +24,3 @@
   - mh-cbon <mh-cbon@users.noreply.github.com>
 
 -- mh-cbon <mh-cbon@users.noreply.github.com>; Sun, 16 Oct 2016 17:01:52 +0200
-
-
