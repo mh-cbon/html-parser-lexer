@@ -11,10 +11,10 @@ const (
 	TagOpenToken  lexer.TokenType = iota // 0
 	TagCloseToken                        // 1
 
-  yyy // 4
-	TagOpenEndToken    // 3
-	xxx // 4
-	TagCloseEndToken   // 5
+	yyy              // 4
+	TagOpenEndToken  // 3
+	xxx              // 4
+	TagCloseEndToken // 5
 
 	TagAttrNameToken  // 6
 	TagAttrEqToken    // 7

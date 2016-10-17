@@ -12,11 +12,11 @@ import (
 func Test_Fixture1(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:1, Value:"</html"},
-    lexer.Token{Type:5, Value:">"},
-  }
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 1, Value: "</html"},
+		lexer.Token{Type: 5, Value: ">"},
+	}
 
 	input := `<html></html>`
 
@@ -26,30 +26,30 @@ func Test_Fixture1(t *testing.T) {
 func Test_Fixture2(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:10, Value:"\n"},
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:10, Value:"\n"},
-    lexer.Token{Type:0, Value:"<input"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"type"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:9, Value:"button"},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"disabled"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"value"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:9, Value:"42"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:3, Value:"/>"},
-    lexer.Token{Type:10, Value:"\n"},
-    lexer.Token{Type:1, Value:"</html"},
-    lexer.Token{Type:5, Value:">"},
-    lexer.Token{Type:10, Value:"\n"},
-  }
+		lexer.Token{Type: 10, Value: "\n"},
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 10, Value: "\n"},
+		lexer.Token{Type: 0, Value: "<input"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "type"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 9, Value: "button"},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "disabled"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "value"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 9, Value: "42"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 3, Value: "/>"},
+		lexer.Token{Type: 10, Value: "\n"},
+		lexer.Token{Type: 1, Value: "</html"},
+		lexer.Token{Type: 5, Value: ">"},
+		lexer.Token{Type: 10, Value: "\n"},
+	}
 
 	input := `
 <html>
@@ -63,16 +63,16 @@ func Test_Fixture2(t *testing.T) {
 func Test_Fixture3(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:0, Value:"<input"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"type"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:9, Value:"butt\\\"on"},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:3, Value:"/>"},
-  }
+		lexer.Token{Type: 0, Value: "<input"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "type"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 9, Value: "butt\\\"on"},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 3, Value: "/>"},
+	}
 
 	input := `<input type="butt\"on" />`
 
@@ -95,12 +95,12 @@ func Test_Fixture4(t *testing.T) {
 func Test_Fixture5(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:11, Value:"whatever "},
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:11, Value:"it works ?"},
-  }
+		lexer.Token{Type: 11, Value: "whatever "},
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 11, Value: "it works ?"},
+	}
 
 	input := `whatever <html> it works ?`
 
@@ -110,14 +110,14 @@ func Test_Fixture5(t *testing.T) {
 func Test_Fixture6(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:3, Value:""},
-    lexer.Token{Type:0, Value:"<div"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:11, Value:"shame this..."},
-  }
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 3, Value: ""},
+		lexer.Token{Type: 0, Value: "<div"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 11, Value: "shame this..."},
+	}
 
 	input := `<html <div> shame this...`
 
@@ -127,34 +127,34 @@ func Test_Fixture6(t *testing.T) {
 func Test_Fixture7(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:10, Value:"\n\n"},
-    lexer.Token{Type:0, Value:"<esi:include"},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"src"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:9, Value:"http://example.com/1.html"},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"alt"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:9, Value:"http://bak.example.com/2.html"},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:10, Value:" "},
-    lexer.Token{Type:6, Value:"onerror"},
-    lexer.Token{Type:7, Value:"="},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:9, Value:"continue"},
-    lexer.Token{Type:8, Value:"\""},
-    lexer.Token{Type:3, Value:"/>"},
-    lexer.Token{Type:10, Value:"\n\n"},
-    lexer.Token{Type:1, Value:"</html"},
-    lexer.Token{Type:5, Value:">"},
-    lexer.Token{Type:10, Value:"\n"},
-  }
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 10, Value: "\n\n"},
+		lexer.Token{Type: 0, Value: "<esi:include"},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "src"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 9, Value: "http://example.com/1.html"},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "alt"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 9, Value: "http://bak.example.com/2.html"},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 10, Value: " "},
+		lexer.Token{Type: 6, Value: "onerror"},
+		lexer.Token{Type: 7, Value: "="},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 9, Value: "continue"},
+		lexer.Token{Type: 8, Value: "\""},
+		lexer.Token{Type: 3, Value: "/>"},
+		lexer.Token{Type: 10, Value: "\n\n"},
+		lexer.Token{Type: 1, Value: "</html"},
+		lexer.Token{Type: 5, Value: ">"},
+		lexer.Token{Type: 10, Value: "\n"},
+	}
 
 	input := `<html>
 
@@ -169,15 +169,15 @@ func Test_Fixture7(t *testing.T) {
 func Test_Fixture8(t *testing.T) {
 
 	expected := []lexer.Token{
-    lexer.Token{Type:0, Value:"<html"},
-    lexer.Token{Type:3, Value:">"},
-    lexer.Token{Type:10, Value:"\n  "},
-    lexer.Token{Type:11, Value:"div>\n"},
-    lexer.Token{Type:1, Value:"</html"},
-    lexer.Token{Type:10, Value:"\n"},
-    lexer.Token{Type:5, Value:""},
-    lexer.Token{Type:11, Value:"Really broken..did you drink ? ah ah ah\n"},
-  }
+		lexer.Token{Type: 0, Value: "<html"},
+		lexer.Token{Type: 3, Value: ">"},
+		lexer.Token{Type: 10, Value: "\n  "},
+		lexer.Token{Type: 11, Value: "div>\n"},
+		lexer.Token{Type: 1, Value: "</html"},
+		lexer.Token{Type: 10, Value: "\n"},
+		lexer.Token{Type: 5, Value: ""},
+		lexer.Token{Type: 11, Value: "Really broken..did you drink ? ah ah ah\n"},
+	}
 
 	input := `<html>
   div>
@@ -232,10 +232,10 @@ func Example_lexer() {
 	w.Flush()
 	//Output:
 	// name             | type | value
-  // TagOpenToken     | 0    | "<html"
-  // TagOpenEndToken  | 3    | ">"
-  // TextToken        | 11   | "c o n t e n t"
-  // TagCloseToken    | 1    | "</html"
-  // TagCloseEndToken | 5    | ">"
+	// TagOpenToken     | 0    | "<html"
+	// TagOpenEndToken  | 3    | ">"
+	// TextToken        | 11   | "c o n t e n t"
+	// TagCloseToken    | 1    | "</html"
+	// TagCloseEndToken | 5    | ">"
 
 }
